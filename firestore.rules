@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // スレッドの読み取りは誰でも可能、作成も誰でも可能
+    match /threads/{threadId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if request.resource.data.replyCount == resource.data.replyCount + 1;
+    }
+    
+    // 投稿の読み取りは誰でも可能、作成も誰でも可能
+    match /posts/{postId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+} 

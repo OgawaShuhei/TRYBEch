@@ -1,0 +1,11 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // 読み取りは誰でも可能
+      allow read: if true;
+      // アップロードは一時的に無効化（必要な場合は後で有効化）
+      allow write: if false;
+    }
+  }
+} 

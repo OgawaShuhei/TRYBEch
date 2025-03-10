@@ -1,0 +1,59 @@
+{
+  "name": "trybe",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://trybe-eecda.web.app",
+  "dependencies": {
+    "@genkit-ai/googleai": "^1.0.5",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.2",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.14.1",
+    "genkit": "^1.0.5",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.8",
+    "web-vitals": "^3.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "emulators": "firebase emulators:start --project demo-project",
+    "dev": "concurrently \"npm run emulators\" \"npm run start\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.31"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "firebase-tools": "^13.31.2"
+  }
+}
